@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Helvetica Neue Light'), local('HelveticaNeue-Light'), url('../fonts/HelveticaNeue-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Glifos';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/Glifos.woff');
+}
+
+body {
+    background-color: #F6F6F6;
+    text-align: center;
+    font-family: 'Helvetica Neue Light', Helvetica, sans-serif;
+    letter-spacing: 0em; 
+    color: #5F7883;
+}
+
+#question, #answer{
+    font-size: 2.5em;
+    margin: 1em;
+}
+
+#answer {
+  font-size: 2em;
+}
+
+input[name="url"] {
+    background-color: inherit;
+    width: 194px;
+    border: none;
+    color: #358cce;
+    min-width: 150px;
+    max-width: 400px;
+    background-image: none;
+    transition: width 0.2s ease;
+    
+    -moz-transition-property: width; 
+    -webkit-transition-property:width; 
+    -o-transition-property:width;
+    
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s; 
+    -webkit-transition-duration: 0.2s; 
+    -o-transition-duration: 0.2s;
+    
+    transition-timing-function: ease;
+    -moz-transition-timing-function: ease; 
+    -webkit-transition-timing-function: ease; 
+    -o-transition-timing-function: ease;
+    
+}
+
+#what {
+    color: #358cce;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 15%;
+}
+
+footer {
+  font-size: .8em;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  margin:10px;
+}
+
+footer a {
+  color: #358cce;
+  text-decoration: none;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "Glifos";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+
+.icon-ok:before {
+  content: '\e802';
+  color: #56af31;
+}
+.icon-cancel:before {
+  content: '\e803';
+  color: #cc4746;
+}
+.icon-github-squared:before {
+  content: '\e804';
+}
+.icon-twitter-squared:before {
+  content: '\e805';
+}
+
+.big {
+  font-size: 1.8em;
+  vertical-align:middle;
+  color: #5F7883;
+}
+
+@media (max-width: 800px) {
+#question, #answer{
+  font-size: 1.5em;
+  margin: 1em;
+}
+input[name="url"] {
+  width: 194px;
+  min-width: 10px;
+  max-width: 400px;
+}
+}
