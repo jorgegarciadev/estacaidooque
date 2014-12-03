@@ -40,7 +40,10 @@ def answer(userUrl):
         return u"Err... No me viene nada por %s ¿Pruebo con Fernández?" % (userUrl)
     else:
         host = parsedUrl[2]
-        response = pokeSite(host)
+        try:
+          response = pokeSite(host)
+        except:
+          response = None
 
     if response == None or response['code'] >= 400:
         return u"Efectivamente, %s está caido" % (userUrl)
