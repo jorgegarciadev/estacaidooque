@@ -10,8 +10,11 @@ def validator(userUrl):
 
     if matched:
         url = matched.group(0)
+        print url
         scheme = matched.group(1)
+        print scheme
         host = matched.group(2)
+        print host
     else:
         return None
     # path is ignored
@@ -25,7 +28,7 @@ def validator(userUrl):
 def pokeSite(host, path = "/"):
     try:
         conn = httplib.HTTPConnection(host)
-        conn.request("HEAD", path)
+        conn.request("GET", path)
         statusCode = conn.getresponse().status
         response = httplib.responses[statusCode]
 
