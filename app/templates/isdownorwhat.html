@@ -28,7 +28,7 @@
             return w;
         }
         function resize() {
-            var width = $(input).val().width()
+            var width = $(input).val().replace("<", "&lt;").replace(">", "&gt;").width()
             $(input).css({'width': width})
         }
         function empty(e) {
